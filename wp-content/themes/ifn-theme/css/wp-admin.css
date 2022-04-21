@@ -1,0 +1,24 @@
+/* Header Image Settings */
+.header-image-url-input-img{
+    width: 300px;
+    max-width: 100%;
+}
+
+.header-image-url-input-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.header-image-url-input-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+/* Disable post publishing trough 'quick edit' */
+/* .wp-list-table.posts .inline-edit-status{
+    display: none;
+} */

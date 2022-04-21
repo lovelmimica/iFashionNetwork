@@ -1,0 +1,1290 @@
+/*
+
+Theme Name: IFN Custom Theme
+
+Author: Lovel Mimica
+
+Description: Custom theme, specially developed for ifashionnetwork.com website
+
+Version: 1.0
+
+*/
+
+
+
+@font-face {
+
+    font-family: 'Montserrat-Light';
+
+    src: url("fonts/Montserrat-Light.otf");
+
+}
+
+@font-face{
+    font-family: 'Galliard';
+    src: url("fonts/GalliardITCbyBT-Roman.otf");
+}
+
+@font-face{
+    font-family: 'Lora';
+    src: url("fonts/Lora-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Biryani-Regular";
+    src: url("fonts/Biryani-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Biryani-SemiBold";
+    src: url("fonts/Biryani-SemiBold.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Biryani-Bold";
+    src: url("fonts/Biryani-Bold.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Biryani-ExtraBold";
+    src: url("fonts/Biryani-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpartanMB-Regular";
+    src: url("fonts/SpartanMB-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpartanMB-Medium";
+    src: url("fonts/SpartanMB-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpartanMB-SemiBold";
+    src: url("fonts/SpartanMB-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpartanMB-Bold";
+    src: url("fonts/SpartanMB-Bold.otf") format("truetype");
+}
+
+html body{
+    font-family: 'Galliard';
+    font-size: 17px;
+}
+
+
+
+.blog-item .reading-time{
+
+    color: #333;
+
+}
+
+
+
+div:nth-of-type(2) article.blog-item .entry-meta > span::before, 
+
+div:nth-of-type(2) article.blog-item .entry-meta > span::after{
+
+    height: 2px;
+
+}
+
+.main-container{
+    padding-top: 25px;
+}
+
+a.button{
+    font-family: 'Biryani-SemiBold';
+    padding-bottom: 9px!important;
+}
+
+/* Single post */
+
+.blog-item.blog-single .post-title{
+    font-size: 45px;
+}
+
+.blog-item.blog-single .post-title.read-more{
+    font-size: 35px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+body article.blog-item .post-title a{
+    color: inherit;
+}
+
+.blog-item.blog-single .entry-excerpt :is(.wp-caption, iframe, p > img){
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.blog-item.blog-single .entry-excerpt .wp-caption p{
+    text-align: center;
+}
+
+.blog-item.blog-single .entry-date{
+    text-align: left;
+}
+
+.gallery{
+
+    margin-bottom: 15px!important;
+
+    margin-top: 15px!important;
+
+}
+
+
+
+.gallery img{
+    width: 100%;
+    height: auto;
+    border-color: transparent!important;
+}
+
+
+
+.gallery .gallery-item{
+
+    margin: 0!important;
+
+}
+
+
+
+.gallery-modal{
+
+    background-color: black;
+
+    position: fixed;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    opacity: 0;
+
+    transition: opacity 0.5s;
+
+}
+
+
+
+.gallery-modal.displayed{
+
+    display: block;
+
+    opacity: 1;
+
+}
+
+
+
+.gallery-modal__header{
+
+    border-bottom: 1px solid rgba(119, 119, 119, 0.8);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 80px;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+    /* background-image: url('/wp-content/themes/ifn-theme/images/ifashion-network-logo-dark.png'); */
+
+    background-position: center;
+
+    background-size: 120px;
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+.gallery-modal__header .gallery-modal__logo{
+
+    height: 100%;
+
+    padding: 10px;
+
+}
+
+body :is(article.blog-item, .blog-item-boxed) .gallery-modal  .gallery-modal__header  h2.brand-title{
+    color: white;
+    margin: 0 0 -10px 0;
+}
+
+.gallery-modal .gallery-modal__header .entry-social{
+
+    margin: 0;
+
+}
+
+
+
+.gallery-modal .gallery-modal__header .entry-social a{
+
+    border-color: white;
+
+}
+
+
+
+.gallery-modal .gallery-modal__header .entry-social i{
+
+    color: white;
+
+}
+
+
+
+.gallery-modal .gallery-modal__header .entry-social a:hover{
+
+    background-color: white;
+
+}
+
+
+
+.gallery-modal .gallery-modal__header .entry-social a:hover i{
+
+    color: black;
+
+}
+
+
+
+.gallery-modal__back{
+
+    color: white;
+
+    font-family: 'Montserrat-Light';
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+}
+
+
+
+.gallery-modal__back:hover{
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+
+.gallery-modal__back i{
+
+    color: white;
+
+    font-size: 20px;
+
+}
+
+
+
+.gallery-modal__body{
+
+    height: calc(100vh - 80px);
+
+}
+
+
+
+.gallery-modal__image-column{
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    height: 100%;
+
+}
+
+
+
+.gallery-modal__image{
+
+    width: auto;
+
+    max-width: 90%;
+
+    height: auto;
+
+    max-height: 90%;
+
+}
+
+
+
+.gallery-modal__navigation-column{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    height: 100%;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.gallery-modal__title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-modal__designer{
+    text-align: center;
+}
+
+.gallery-modal__designer, .gallery-modal__season{
+    color: white;
+
+    font-family: 'Montserrat-Light';
+
+    font-size: 30px;
+}
+
+.gallery-modal__season{
+    font-size: 20px;
+    text-align: right;
+}
+
+.gallery-modal__navigation{
+
+    color: white;
+
+    font-family: 'Montserrat-Light';
+
+    font-size: 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    width: 170px;
+
+}
+
+
+
+.gallery-modal__navigation i{
+
+    cursor: pointer;
+
+}
+
+.widget-tags a{
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Biryani-SemiBold'!important;
+    font-weight: normal;
+    color: #fff;
+    background-color: #222;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.widget-tags a:hover{
+    text-decoration: none;
+    background-color: #b23763;
+    color: #fff;
+}
+
+#comments #reply-title{
+    font-family: 'SpartanMB-SemiBold';
+}
+
+#comments #commentform :is(input, textarea){
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+    font-size: 15px;
+}
+
+#comments #commentform .form-submit span{
+    font-size: 15px;
+}
+
+@media (max-width: 991px) {
+
+    .gallery-modal__body{
+
+        height: auto;
+
+    }
+
+    .gallery-modal__title{
+        padding-top: 20px;
+    }
+
+    .gallery-modal__navigation-column{
+
+        /* height: 50px; */
+
+        justify-content: flex-end;
+
+        align-items: center;
+
+    }
+
+    .gallery-modal__season{
+        text-align: center;
+    }
+
+    .gallery-modal__navigation{
+
+        font-size: 30px;
+
+    }
+
+
+
+    .gallery-modal__image-column{
+
+        height: calc(100vh - 212px);
+
+    }
+
+
+
+    .gallery-modal__add-column{
+
+        display: none;
+
+    }
+
+}
+
+
+
+@media (max-width: 667px){
+
+    .gallery-modal__header{
+
+        background-image: none;
+
+    }
+
+
+
+    .gallery-modal__back{
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* Post cards general */
+body :is(article.blog-item, .blog-item-boxed) .post-title{
+    font-family: 'SpartanMB-SemiBold';
+    color: black;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+body :is(article.blog-item, .blog-item-boxed) .entry-date{
+    font-family: 'Biryani-Regular';
+    text-transform: none;
+    font-size: 16px;
+}
+
+body article.blog-item .entry-media{
+    overflow: hidden;
+}
+
+body article.blog-item .entry-media img{
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+body article.blog-item:not(.blog-single) .entry-media:hover img{
+    transform: scale(1.2);
+}
+
+body .seperator{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body .seperator::before, body .seperator::after{
+    top: 12px;
+}
+
+/* Slider post card */
+.swiper-wrapper .swiper-slide .entry-media img{
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.swiper-wrapper .blog-item-boxed .post-title{
+    font-family: 'SpartanMB-SemiBold';
+}
+
+@media (max-width: 767px){
+    body .swiper-wrapper .blog-item-boxed .entry-info .post-title{
+        font-size: 25px;
+        line-height: 35px;
+        max-height: fit-content;
+    }
+
+    body .blog-item-boxed .entry-info{
+        padding: 0;
+    }
+}
+
+@media (max-width: 479px){
+    body .swiper-wrapper .blog-item-boxed .entry-info .post-title{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    body .swiper-wrapper .blog-item-boxed .seperator{
+        max-width: 100%;
+    }
+}
+
+/* Grid post card */
+.masonry-item.grid-post-card .entry-media img{
+    /* max-height: 220px;
+    height: 25vw; */
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 4/5;
+}
+
+/* Category archive */
+.category-title{
+    font-size: 45px;
+    font-family: 'SpartanMB-SemiBold';
+    color: black;
+    text-align: center;
+    letter-spacing: -0.4px;
+    line-height: 1em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+ }
+
+ .category-title a{
+     color: inherit;
+ }
+
+ .seperator.wide-seperator{
+     margin-top: 10px;
+     margin-bottom: 20px;
+ }
+
+ .seperator.wide-seperator:before{
+    left: 0;
+    margin-left: calc(50% + 14px);
+    width: 50%;
+}
+
+ .seperator.wide-seperator:after{
+    right: 0;
+    margin-right: calc(50% + 14px);
+    width: 50%;
+}
+
+/* Category post card */
+
+.blog-item .entry-meta > span svg{
+
+    width: 14px;
+
+    height: 13px;
+
+    top: 3px;
+
+    position: relative;
+
+    margin-right: 5px;
+
+}
+
+.blog-item .entry-meta > span > span{
+    color: grey;
+}
+
+body .blog-grid-row article.blog-item{
+    margin-bottom: 20px;
+}
+
+body .blog-grid-row article.blog-item > .row > .content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .blog-grid-row article.blog-item > .row > .content-wrapper > .post-title{
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+body .blog-grid-row article.blog-item > .row > .content-wrapper .entry-meta{
+    margin: 0;
+}
+
+body .blog-grid-row article.blog-item > .row > .media-wrapper{
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-grid-row .blog-item .entry-media img{
+    aspect-ratio: 3/2;
+    object-position: top;
+    height: 100%;
+}
+
+.blog-grid-row article.blog-item.style-horizontal > .row > div .entry-media{
+    margin: 0 auto 0 auto;
+    height: 100%;
+}
+
+.blog-grid-row .blog-item.grid-post-card .entry-meta{
+    padding-bottom: 10px;
+}
+
+.blog-grid-row .grid-post-card .post-title{
+    font-size: 22px;
+}
+
+.blog-grid-row .grid-post-card .entry-date{
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.blog-grid-row .grid-post-card .entry-meta{
+    height: auto;
+    line-height: 20px;
+}
+
+.blog-grid-row .grid-post-card .entry-meta > span{
+    line-height: 20px;
+}
+
+.blog-grid-row .blog-item.grid-post-card .entry-meta > span::before,
+.blog-grid-row .blog-item.grid-post-card .entry-meta > span::after{
+    top: 10px;
+}
+
+.row-post-card{
+    background-color: rgba(0,0,0,.04);
+}
+
+.row-post-card .content-wrapper{
+    padding: 10px;
+}
+
+@media (max-width: 517px){
+    body .blog-grid-row article.blog-item > .row > .content-wrapper > .post-title{
+        font-size: 20px;
+        margin-top: 0;
+    }
+}
+
+/* Frontpage quote */
+
+.blog-item-quote-wrapper article.blog-item.blog-item-quote{
+
+    border: none;
+
+}
+
+body article.blog-item.blog-item-quote .entry-media blockquote{
+    padding: 0;
+    font-family: 'Galliard';
+    letter-spacing: 1px;
+}
+
+body article.blog-item .entry-media blockquote.quote-element cite strong{
+    font-family: 'Galliard';
+    letter-spacing: 1px;
+}
+
+
+
+/* Footer */
+
+body footer#footer.footer-dark-topmenu .footer-menu ul{
+    font-family: 'Biryani-SemiBold';
+    font-size: 12px;
+}
+
+body footer#footer .widget .widget-title{
+    font-family: 'Biryani-SemiBold';
+}
+
+body footer#footer.footer-dark-topmenu .copyright-text .widget{
+    font-family: 'Biryani-Regular';
+    font-size: 12px;
+}
+
+.footer-row .fi-caption{
+
+    text-align: center;
+
+}
+
+#footer .footer-row .fi-caption{
+    font-family: 'Gillibert';
+}
+
+.footer-row .fi-caption:hover{
+
+    transition: opacity 0.4s;
+
+    opacity: 0.8;
+
+}
+
+
+
+.footer-container .widget .social-links a{
+
+    font-size: 25px;
+
+}
+
+
+
+.instagram-images-wrapper{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.footer-container > .row{
+
+    display: flex;
+
+    align-items: baseline;
+
+}
+
+.footer-container .widget .subscribe-form input{
+    font-family: 'Biryani-Regular';
+}
+
+@media (max-width: 991px){
+
+    .footer-container > .row{
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+
+    .footer-container > .row > .col-sm-6{
+
+        text-align: center;
+
+    }
+
+
+
+    .footer-container > .row > .col-sm-6 > .widget-subscribe-form{
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+
+    .footer-container > .row > .col-sm-6 > .widget-subscribe-form > .widget-title{
+
+        margin: 0!important;
+
+    }
+
+}
+
+
+
+@media (max-width: 400px){
+
+    footer#footer.footer-dark-topmenu .footer-menu.footer-navigation ul {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+
+    footer#footer.footer-dark-topmenu .footer-menu.footer-navigation ul li{
+
+        margin: 0;
+
+    }
+
+}
+
+/* Header */
+header#header{
+    background-color: black;
+}
+
+header#header.menu-full-bg .menu-container.header-upper{
+    height: 70.5px;
+    display: flex;
+    align-items: center;
+}
+
+header#header.menu-full-bg .menu-container.header-lower{
+    background-color: white;
+    border-bottom: 2px solid #333;
+}
+
+header#header.menu-full-bg .menu-container.header-lower nav.main-nav > ul > li > a{
+    color: #333;
+}
+
+header#header.menu-full-bg .menu-container.header-lower nav.main-nav > ul > li.current-menu-item > a{
+    color: #b23763;
+}
+
+header#header.menu-full-bg .menu-container.header-lower nav.main-nav > ul > li:hover > a{
+    color: #b23763;
+}
+
+header#header .social-links{
+    padding-top: 4px;
+}
+
+body header#header.menu-full-bg{
+    background-position: center;
+}
+
+header#header.menu-full-bg nav.main-nav > ul > li{
+    font-family: 'Biryani-ExtraBold';
+    font-size: 15px;
+}
+
+header#header.menu-full-bg nav.main-nav > ul > li li{
+    font-family: 'Biryani-SemiBold';
+    width: max-content;
+    min-width: 100%;
+}
+
+.wrapper header#header.menu-full-bg{
+    margin-bottom: 0;
+}
+
+#header .topbar-column{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .header-wrapper #logo.logo-image{
+    width: 140px;
+    height: auto;
+}
+
+.header-wrapper .main-nav{
+    display: flex;
+    align-items: center;
+}
+
+#header .post-title.category-title{
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding-top: 8px;
+}
+
+#header .menu-container{
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+#header .main-nav .menu-item-has-children > ul{
+    left: 0;
+    width: fit-content;
+    min-width: 200px;
+}
+
+#header .main-nav .menu-item-has-children > ul li{
+    width: auto;
+}
+
+body header#header.menu-full-bg #header-search{
+    display: flex;
+    align-items: center;
+}
+
+body header#header.menu-full-bg #header-search span{
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 15px;
+    
+}
+
+body header#header.menu-full-bg #header-search :is(span, i){
+    color: white;
+    transition: all 0.25s ease;
+}
+
+body header#header.menu-full-bg #header-search:hover :is(span, i){
+    color: #b23763;
+}
+
+body header#header.menu-full-bg #header-search i{
+    margin-bottom: 5px;
+}
+
+body header#header.menu-full-bg .topbar-right-content #header-search i.fa{
+    font-size: 18px;
+}
+
+body #overlay-search form input{
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+}
+
+body #overlay-search form p{
+    font-size: 17px;
+}
+
+body header#header.menu-full-bg nav.main-nav{
+    font-family: 'Biryani-SemiBold';
+    font-size: 12px;
+    font-weight: normal;
+}
+
+body header#header.menu-full-bg nav.main-nav.show-menu #close-menu{
+    color: black;
+    right: 20px;
+    top: 30px;
+}
+
+body header#header.menu-full-bg nav.main-nav > ul li.current-menu-item > a{
+    color: #b23763;
+}
+
+
+body header#header.menu-full-bg nav.main-nav.show-menu > ul > li > a{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+body header#header.menu-full-bg nav.main-nav.show-menu > ul > li.menu-item-has-children > ul > li a{
+    font-size: 16px;
+}
+
+body header#header.menu-full-bg nav.main-nav > ul > li.menu-item-has-children > ul{
+    top: 70.5px;
+}
+
+header#header.menu-full-bg nav.main-nav.show-menu > ul{
+    padding: 60px;
+}
+
+header#header.menu-full-bg nav.main-nav.show-menu > ul > li.menu-item-has-children > ul{
+    position: static;
+}
+
+header#header .topbar{
+    height: calc(100vh - 143px);
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    /* max-width: 3000px; */
+    margin: auto;
+}
+
+@media (max-width: 996px) {
+    #header .header-wrapper{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    header#header.menu-full-bg .header-wrapper nav.main-nav::before{
+        color: #333;
+        cursor: pointer;
+    }
+
+    header#header.menu-full-bg .menu-container.header-upper{
+        height: 66px;
+    }
+
+    body header#header.menu-full-bg #header-search{
+        display: none;
+    }
+
+    header#header .topbar{
+        height: calc(100vh - 132px);
+    }
+}
+
+/* Archive page */
+.runway-filter-form{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+    font-family: 'Biryani-Regular';
+}
+
+.runway-filter-form select{
+    cursor: pointer;
+    width: 25%;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.runway-filter-form option{
+    background-color: white;
+    font-family: 'Biryani-Regular';
+}
+
+.article-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.archive article.blog-item.style-horizontal .row{
+    display: flex;
+    margin: 0;
+}
+
+.archive article.blog-item.style-horizontal:nth-of-type(even) .row{
+    flex-direction: row-reverse;
+}
+
+.subcategory-links{
+    display: flex;
+    list-style: none;
+    border-bottom: 2px solid #333;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.subcategory-links > li > a{
+    font-family: 'Biryani-ExtraBold';
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #333;
+    transition: all 0.25s ease;
+}
+
+.subcategory-links > li:hover > a{
+    cursor: pointer;
+    color: #b23763;
+    text-decoration: none;
+}
+
+.subcategory-links > li.current-menu-item > a{
+    color: #b23763;
+}
+
+@media (max-width: 1199px){
+    .article-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .runway-filter-form{
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        padding: 20px 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .runway-filter-form select{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 517px) {
+    .article-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .subcategory-links{
+        overflow-x: scroll;
+    }
+}
+
+/* Contact Us page */
+form.contact-us-form :is(input[type='text'], input[type='email'], textarea){
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+    font-size: 15px;
+}
+
+form.contact-us-form textarea{
+    min-height: 172px;
+}
+
+form.contact-us-form button{
+    font-family: 'Biryani-SemiBold';
+    padding-bottom: 5px;
+}
+
+form.contact-us-form textarea{
+    margin-bottom: 11px;
+}
+
+.gmap-item .label-title{
+    font-family: 'SpartanMB-SemiBold';
+}
+
+.email-message{
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    background-color: #ff0000c4;
+    width: fit-content;
+    margin: 30px auto 30px auto;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Biryani-SemiBold';
+    width: 100%;
+    font-size: 14px;
+}
+
+.email-message.success{
+    background-color: #008000b3;
+}
+
+.emai-message.error{
+    background-color: #ff0000c4;
+}
+
+/* Sidebar */
+body .sidebar .widget .widget-title{
+    font-family: "SpartanMB-Medium";
+}
+
+body .sidebar .widget .popular-posts .rp-category{
+    font-family: 'SpartanMB-SemiBold';
+    color: #777777;
+    letter-spacing: 0.4px;
+    font-family: 'Biryani-Regular';
+    text-transform: none;
+    font-size: 16px;
+}
+
+.sidebar .widget .popular-posts .rp-featured h5{
+    font-family: 'SpartanMB-SemiBold';
+    line-height: 1.2em;
+    color: black;
+}
+
+.sidebar .widget .popular-posts .rp-featured h5 a{
+    color: inherit;
+}
+
+.sidebar .widget .popular-posts ol.rp-items li{
+    font-family: 'Galliard';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body .sidebar .widget.widget-subscribe .entry-subscribe form input{
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+}
+
+body .sidebar .widget.widget-subscribe .entry-subscribe form button {
+    font-family: 'Biryani-SemiBold';
+}
+
+body .sidebar .widget .search_form input{
+    font-family: 'Biryani-Regular';
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* Search page */
+.search-results-subtitle{
+    font-size: 22px;
+    font-family: 'SpartanMB-SemiBold';
+    padding-bottom: 20px;
+}
